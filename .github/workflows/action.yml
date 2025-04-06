@@ -2,9 +2,9 @@ name: 'publish'
 
 on:
   push:
-    tags:
-      - 'v*' # 推送事件匹配 v*, 例如 v1.0，v20.15.10 等来触发工作流
-
+    branches:
+      - main
+      - release
 jobs:
   publish-tauri:
     permissions:
