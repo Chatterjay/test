@@ -1,5 +1,8 @@
 # Updater Log
 
+## v1.0.4
+- feat: xxx4
+
 ## v1.0.3
 - feat: xxx3
 - fix: xxx3
