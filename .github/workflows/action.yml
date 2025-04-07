@@ -1,64 +1,100 @@
-name: Release
-# 触发方式
+name: 'publish'
+
 on:
   push:
-    tags:
-      - "v*"
-  workflow_dispatch:
+    branches:
+      - main
+      - release
+    
 
 jobs:
-  release:
-  	# 由于需要创建release所以需要设置写入权限
+  publish-tauri:
     permissions:
       contents: write
+    outputs:
+      release_id: ${{ steps.tauri-action.outputs.releaseId }}
     strategy:
       fail-fast: false
       matrix:
-      	# 我这里只需要两个平台，完整的可以参考官方的workflow
-        platform: ['windows-latest', 'macos-latest']
+        include:
+          - platform: 'macos-latest' # for Arm based macs (M1 and above).
+            args: '--target aarch64-apple-darwin'
+          - platform: 'macos-latest' # for Intel based macs.
+            args: '--target x86_64-apple-darwin'
+          - platform: 'ubuntu-22.04' # for Tauri v1 you could replace this with ubuntu-20.04.
+            args: ''
+          - platform: 'windows-latest'
+            args: ''
 
     runs-on: ${{ matrix.platform }}
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Rust setup
-        uses: dtolnay/rust-toolchain@stable
-      
-      - name: Install pnpm
-        run: npm install -g pnpm
-      - name: Sync node version and setup cache
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+
+      - name: setup node
+        uses: actions/setup-node@v4
         with:
-          node-version: "lts/*"
-          cache: "pnpm"
-      - name: Install frontend dependencies
-        run: pnpm install --no-frozen-lockfile
-      	# 使用tauri actions
-      - name: Build the app
-        id: build
+          node-version: lts/*
+
+      - name: install Rust stable
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
+
+      - name: install dependencies (ubuntu only)
+        if: matrix.platform == 'ubuntu-22.04'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.0-dev libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
+      - name: install frontend dependencies
+        run: yarn install
+
+      - name: Set TAURI_SIGNING_PRIVATE_KEY environment variable
+        if: matrix.platform == 'macos-latest'
+        env:
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
+        run: |
+          echo "TAURI_SIGNING_PRIVATE_KEY=$TAURI_SIGNING_PRIVATE_KEY" >> $GITHUB_ENV
+          echo "TAURI_SIGNING_PRIVATE_KEY_PASSWORD=$TAURI_SIGNING_PRIVATE_KEY_PASSWORD" >> $GITHUB_ENV
+      - id: tauri-action
         uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # 使用之前配置的私钥
-          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
-          # 使用之前配置的私钥密码
-          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_PRIVATE_KEY_PASSWORD }}
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
         with:
-          tagName: ${{ github.ref_name }}
-          releaseName: "ComfyUI Startup v__VERSION__"
-          releaseBody: "See the assets to download and install this version."
+          tagName: v__VERSION__
+          releaseName: 'App v__VERSION__'
+          releaseBody: 'See the assets to download this version and install.'
           releaseDraft: true
           prerelease: false
+          args: ${{ matrix.args }}
 
-      - name: Upload assets
+  update-updater:
+    needs: publish-tauri
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Generate updater file
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        # 运行自己的脚本
-        run: node scripts/publish.mjs
-        
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        run: yarn updater
+
+      - name: Upload updater file to release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./publish
-          keep_files: true
+          tag_name: ${{ github.ref_name }}
+          files: ./updater/install.json
