@@ -38,7 +38,8 @@
     "updater": {
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDY2NEJERTNBNzFERjI2MzUKUldRMUp0OXhPdDVMWnV0bVFoSzM4bjVJL3NxSWxraWlya2h4Y0RLUzFMZHFnZ2p5RGxmZTRxdUkK",
       "endpoints": [
-        "https://github.com/Chatterjay/test/releases/latest/download/latest.json"
+        "https://github.com/Chatterjay/test/releases/download/updater/latest.json"
+        
       ]
     }
   }
