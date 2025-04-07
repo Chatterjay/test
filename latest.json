@@ -1,0 +1,23 @@
+{
+  "version": "1.0.7",
+  "notes": "See the assets to download this version and install.",
+  "pub_date": "2025-04-07T03:38:18.459Z",
+  "platforms": {
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRMUp0OXhPdDVMWm9lLzJiNDdlbmNocHVaenFuQUZNZUJLNk1BSGRpekU5SmxOOFI4ZmZ3UWxqdlJnbXB6dUcxNnQ3RjZTOXZVSHJsNGxJaWhoTkdBaVhHYkQwdElsbHdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzQzOTk3MDk0CWZpbGU6dmlld2VyMi5hcHAudGFyLmd6CitRbTBodC9ySnZPdjNoMEQ3T0duejQycHB2NzNNblY1ZjlNYkQyTlVRMzlhdVhCbTJjYVI0bldpQzRVMUl1NUdGQzVERC9qUFBJaisrV2tMSk1yekRnPT0K",
+      "url": "https://github.com/Chatterjay/test/releases/download/app-v1.0.7/viewer2_x64.app.tar.gz"
+    },
+    "darwin-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRMUp0OXhPdDVMWm9lLzJiNDdlbmNocHVaenFuQUZNZUJLNk1BSGRpekU5SmxOOFI4ZmZ3UWxqdlJnbXB6dUcxNnQ3RjZTOXZVSHJsNGxJaWhoTkdBaVhHYkQwdElsbHdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzQzOTk3MDk0CWZpbGU6dmlld2VyMi5hcHAudGFyLmd6CitRbTBodC9ySnZPdjNoMEQ3T0duejQycHB2NzNNblY1ZjlNYkQyTlVRMzlhdVhCbTJjYVI0bldpQzRVMUl1NUdGQzVERC9qUFBJaisrV2tMSk1yekRnPT0K",
+      "url": "https://github.com/Chatterjay/test/releases/download/app-v1.0.7/viewer2_x64.app.tar.gz"
+    },
+    "linux-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRMUp0OXhPdDVMWnZNWGNGMUJUM0JrTlVNd0VMTitpQXJQWUJzaFdPRGhYdDF2RnZlZTRlK01KMDlySUJ1UnFkdkUzL282clZIRU8zOUR0Y1NhYVBjaU9nNnpUanA1TFE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzQzOTkyOTE5CWZpbGU6dmlld2VyMl8xLjAuN19hbWQ2NC5BcHBJbWFnZQpIaXczMDkveG5ObkQ5cDVFL1RlY210RWZpYnE0YTVwaUZyaWxwbmQ2SUd5b3FaNHRGdlBnUXpMR0pXRTUzZHQ0RUVaS0hRR0JzRkJTYklEcFRpdG9CQT09Cg==",
+      "url": "https://github.com/Chatterjay/test/releases/download/app-v1.0.7/viewer2_1.0.7_amd64.AppImage"
+    },
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRMUp0OXhPdDVMWmdnWlNYcGJSSXRKNHlEUXdaVlU5d09SY3g3TUhETTRxSnNkb0Q2MHcwV1MyMUpDVmNyaHRjKzd2S0tqWHh4cXhnOTdyTmpHM3o5MDdENWREbjVRbkFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzQzOTkzMTIwCWZpbGU6dmlld2VyMl8xLjAuN194NjRfZW4tVVMubXNpCk9HMFZhc1VVWklQQ0pCMklDUkYxN1RMOFJXWHUySDlyRGk5ZWNVMDRvQzI4dW1EZ3gxU0hHRjl0U0pyaG5Fa3JwcGsweEMwK25Yb3FtaVVEenFPNENBPT0K",
+      "url": "https://github.com/Chatterjay/test/releases/download/app-v1.0.7/viewer2_1.0.7_x64_en-US.msi"
+    }
+  }
+}
