@@ -1,11 +1,15 @@
 {
   "version": "1.0.8",
   "notes": "See the assets to download this version and install.",
-  "pub_date": "2025-04-07T03:44:34.482Z",
+  "pub_date": "2025-04-07T03:44:37.243Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRMUp0OXhPdDVMWm05YWorS0dnZkZuYjRJVWdZdnJVSEdHOW9oc2gyOGtWbHdPQnEyVENTV094TnBxcUUxS01Wdk9kSk9aNUFwRDMvbklPQzFEYzNwK1Vwbk1sK2EySlFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzQzOTk3NDcwCWZpbGU6dmlld2VyMi5hcHAudGFyLmd6CmNuYWl5WXZCdkNWTURYaVI1Qll3OXJ6TGtDNHJUVFQ4V2lJamgvYmg4SGwzM2tPWEdMek5xYVFpd1ZlTllwTHRaQXcyekpyQTYySmlhMVdscnlIMkJ3PT0K",
-      "url": "https://github.com/Chatterjay/test/releases/download/app-v1.0.8/viewer2_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRMUp0OXhPdDVMWnZjQ3ZoQkdQWmFYSkVrRGdsb1ZIazhCQmxWVGRzMlYzMkVPWTBHZ2prRkNodk0wdFJUUlRUTjBRdlo1TWg2YnhxTDNZTVZiTDNzVmdaaUpTU0hwTXc0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzQzOTk3NDczCWZpbGU6dmlld2VyMi5hcHAudGFyLmd6CkNaRzdnUFJMbDh1K2xGZEVaV01PNE45RzNvdGw0TlRaTUwyTWRYenNBSmcwczNyOW9hUkF5amsyZlAyUENaRTZaV2tEOXZnNEE0MldFa01WUXBxVEJ3PT0K",
+      "url": "https://github.com/Chatterjay/test/releases/download/app-v1.0.8/viewer2_x64.app.tar.gz"
+    },
+    "darwin-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRMUp0OXhPdDVMWnZjQ3ZoQkdQWmFYSkVrRGdsb1ZIazhCQmxWVGRzMlYzMkVPWTBHZ2prRkNodk0wdFJUUlRUTjBRdlo1TWg2YnhxTDNZTVZiTDNzVmdaaUpTU0hwTXc0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzQzOTk3NDczCWZpbGU6dmlld2VyMi5hcHAudGFyLmd6CkNaRzdnUFJMbDh1K2xGZEVaV01PNE45RzNvdGw0TlRaTUwyTWRYenNBSmcwczNyOW9hUkF5amsyZlAyUENaRTZaV2tEOXZnNEE0MldFa01WUXBxVEJ3PT0K",
+      "url": "https://github.com/Chatterjay/test/releases/download/app-v1.0.8/viewer2_x64.app.tar.gz"
     }
   }
 }
