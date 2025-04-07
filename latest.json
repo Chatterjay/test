@@ -1,7 +1,7 @@
 {
   "version": "1.0.8",
   "notes": "See the assets to download this version and install.",
-  "pub_date": "2025-04-07T03:53:24.092Z",
+  "pub_date": "2025-04-07T03:56:22.270Z",
   "platforms": {
     "darwin-aarch64": {
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRMUp0OXhPdDVMWmhVZGNzbkV2Ry96d3JFM0tvQ0xlbk5Mb3RkYndwU2poYVlWeDcvU25HZEtVTXRId3Z5clN0SzVraVJCRlVwem1YTks2THF2RHVOY1dpaGZYOWpQeVFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzQzOTk3ODEzCWZpbGU6dmlld2VyMi5hcHAudGFyLmd6Cmk5SUx2M1hZS2lSSEI4RGtnd29zd2NHaS9rQzFyMEhrbGhpUkhnUWhlNk5wbUU3ejRwaFdsOHUvZkY1bDFZL05ZUGJjbFVrQklRdVVKM1lyWG5CMUJ3PT0K",
@@ -16,7 +16,7 @@
       "url": "https://github.com/Chatterjay/test/releases/download/app-v1.0.8/viewer2_1.0.8_amd64.AppImage"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRMUp0OXhPdDVMWnFsNUhWNlUyQWdlTWU2cTR2UFlibkdyNCtSWWozaUsrR2tZV1JSbUoyNUdJL1VsblhKYmNtNit6Q2ZHYmxDUHEvOU5BUlphaWk5cGx5VU1Bc2RPZ3dRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzQzOTk3NzQxCWZpbGU6dmlld2VyMl8xLjAuOF94NjRfZW4tVVMubXNpCk12ZzVFeFFCdWtOdmZYc1k0ekM0VTRpREVjMytNcmZVSjZsZjc5ODFCcG1XMVFLTHEzY3JQUXcwYWx4Wk9kZENXRmY3em8wY043K0o5eU8vR08xNEJ3PT0K",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRMUp0OXhPdDVMWnZpTlYvekN1MTFxbDhpMy85UXJXNGJCcld3RHNUR2ZyQ1h5T3ZqRVIyamZERlhJVTdvSFBJSXBjVmtqNVhHRFhIN05UbGxlbHk5VDV0WUx0Wjl3NGc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzQzOTk4MTc4CWZpbGU6dmlld2VyMl8xLjAuOF94NjRfZW4tVVMubXNpCjJ4VGhRM2xzK1ZtYXgyTDFMRjB5NEpRaEV6dmxqdEJ1ajRpRkQ4aXBHZmNLUnV3TlcyNlhPTDFwTFJreGRERzNMQ00xZFhQVGhtcVorNDlFcXZVbkJBPT0K",
       "url": "https://github.com/Chatterjay/test/releases/download/app-v1.0.8/viewer2_1.0.8_x64_en-US.msi"
     }
   }
